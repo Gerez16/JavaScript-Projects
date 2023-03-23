@@ -17,7 +17,7 @@ function Height_Function() {
     else {
         Ride = "You are not tall enough to get on the rides";
     }
-    document.getElementById("This").innerHTML = Ride;
+    document.getElementById("How_Tall_Are_You?").innerHTML = Ride;
 }
 
 var X = 100;
