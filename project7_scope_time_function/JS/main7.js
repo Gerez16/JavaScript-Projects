@@ -1,7 +1,16 @@
-function get_Date() {
-    if (new Date().getHours()  < 10) {
-    document.getElementById("Welcome").innerHTML = "Please call before our closing time";
+function Time_function() {
+    var Time = new Date().getHours();
+    var Reply;
+    if (Time < 3 == Time > 0) {
+        Reply = "It is morning time!";
     }
+    else if (Time >= 10 == Time < 18) {
+        Reply = "It is afternoon.";
+    }
+    else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("What_time_is_it").innerHTML = Reply;
 }
 
 if ( 200 > 100) {
@@ -42,4 +51,4 @@ Add_numbers_4();
 
 
 console.log(20 + 20); // this should be viewd on developer tools
-document.getElementById("plus").innerHTML // the ID is voided
+document.getElementById("plus").innerHTML // void the line 46 to for no error..
