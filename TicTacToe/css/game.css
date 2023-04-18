@@ -1,7 +1,7 @@
 /*This container includes our table and ur canvas.*/
 .center-container {
     /*This property sets the width of our containner.*/
-    width:608px;
+    width: 608px;
     /* this property centers our container.*/
     margin: 0 auto;
     /*50px down from the top.*/
@@ -19,7 +19,7 @@ table {
 td {
     /* this property changes the cursor to the index finger hand when
     we hover over td elements*/
-    cursor:pointer;
+    cursor: pointer;
     /* this property sets our table border style*/
     border: 4px solid rgba( 252, 169, 3, .8);
     /*this property removes default padding*/
