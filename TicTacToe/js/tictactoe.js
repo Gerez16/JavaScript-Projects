@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
 
 
         //this function plays placement sound.
-        Audio('./media/place.mp3');
+        audio('./media/place.mp3');
         //this condition disables clicking for computer turn.
         if (activePlayer ==='O') {
             //this function disables clicking for computers turn.
@@ -108,7 +108,7 @@ function checkWinConditions() {
         //this function plays the tie game sound
         Audio('./media/tie.mp3');
         //this function sets a .3 second timer before the restGame is called
-        setTimeout(function () { restGame(); }, 500);
+        setTimeout(function () { resetGame(); }, 500);
     }
 
     //this function checks if an arry includes 3 stringsd. it is used to check for
@@ -143,7 +143,7 @@ function audio(audioURL) {
 }
 
 //this function utilizes HTML canvas to draw win lines.
-function drawWinline( coordX1, coordY1, coordX2, coordY2) {
+function drawWinLine( coordX1, coordY1, coordX2, coordY2) {
     // this line accesses our HTML canvas element.
     const canvas = document.getElementById('win-lines');
     //this line gives us access to methods and properties to use on canvas.
@@ -223,21 +223,11 @@ function animateLineDrawing() {
 function resetGame() {
     //this for loop iterates through each HTML square element.
     for (let i = 0; i < 9; i++) {
+        let square = document.getElementById(String(i));
         //this variable gets the HTML element i
-        square.style.backroundImage = '';
+        square.style.backgroundImage = '';
     }
     //this resets our array so its empty and we can start over
     selectedSquares = [];
 } 
 
-//this function resets the game in the event of a tie or a win.
-function resetGame() {
-    //this for loops iterates through each HTML square element.
-    for (let i = 0; i < 9; i++) {
-        //this variable gets the HTML element i
-        let square = document.getElementById(String(i));
-        //this removes our element backgroundImage
-    }
-    //this resets our array so it is empty and we can start over
-    selectedSquares = [];
-}
