@@ -18,6 +18,14 @@
     height: 200px;
     float: left;
 }
+
+.middle{ 
+    width: 200px;
+    height: 200px;
+    float: middle;
+}
+
+
 .right {
     width: 200px;
     height: 200px;
